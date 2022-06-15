@@ -1,0 +1,22 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --cart-modal: rgba(0, 0, 0, 0.5);
+  --gray: #a9a9a9;
+  --light-gray: #e5e5e5;
+  --orange-red: #ff4500;
+  --deep-sky-blue: #00bfff;
+  --alice-blue: #f0f8ff;
+  --red: #ff0000;
+  --dark-cyan: #008b8b;
+}
+
+.footer {
+  border: 2px solid var(--light-gray);
+  height: 12rem;
+  text-align: center;
+  background: var(--light-gray);
+}
+.footer-div {
+  margin-top: 5rem;
+}

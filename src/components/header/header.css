@@ -1,0 +1,82 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --cart-modal: rgba(0, 0, 0, 0.5);
+  --gray: #a9a9a9;
+  --orange-red: #ff4500;
+  --deep-sky-blue: #00bfff;
+  --alice-blue: #f0f8ff;
+  --red: #ff0000;
+  --dark-cyan: #008b8b;
+}
+
+.header-div {
+  height: 100%;
+  width: 100%;
+  padding-right: 14px;
+  padding-bottom: 6rem;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background: var(--white);
+  z-index: 3;
+}
+.logo {
+  height: 40%;
+  width: 20%;
+  margin-left: 2%;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-cart {
+  display: flex;
+  margin-top: 4rem;
+  margin-right: 2rem;
+}
+.currency {
+  margin-right: 40px;
+  cursor: pointer;
+}
+.currency span {
+  margin-left: 5px;
+}
+.currency ul {
+  position: fixed;
+  top: 6rem;
+  padding: 9px;
+  list-style: none;
+  background: var(--white);
+  z-index: 2;
+  opacity: 0;
+  transition: all 1s;
+}
+.currency:hover > ul {
+  opacity: 1;
+}
+.currency-li {
+  opacity: 1;
+}
+.cart-icon {
+  display: flex;
+  font-size: 18px;
+}
+.cart-icon:hover {
+  cursor: pointer;
+}
+.cart-icon p {
+  margin-left: 10px;
+  padding: 1px;
+  text-align: center;
+  font-size: 15px;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  background: var(--orange-red);
+}
