@@ -49,7 +49,7 @@
 }
 .currency ul {
   position: fixed;
-  top: 6rem;
+  top: 5.3rem;
   padding: 9px;
   list-style: none;
   background: var(--white);
@@ -58,9 +58,6 @@
   transition: all 1s;
 }
 .currency:hover > ul {
-  opacity: 1;
-}
-.currency-li {
   opacity: 1;
 }
 .cart-icon {
@@ -79,4 +76,9 @@
   width: 21px;
   border-radius: 50%;
   background: var(--orange-red);
+}
+@media (max-width: 450px) {
+  .logo {
+    width: 40%;
+  }
 }

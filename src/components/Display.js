@@ -48,7 +48,6 @@ function Display() {
   const withoutModal = () => {
     if (window.innerWidth <= 450) {
       navigate("/cart");
-      // window.location.href = "http://localhost:3000/cart";
       data.setModal(false);
     } else {
       data.setModal(true);
@@ -132,7 +131,13 @@ function Display() {
           <div key={pet.id}>
             <div className="product-disp-1">
               <div className="img-disp">
-                <img src={pet.images} alt="product" />
+                <img
+                  onClick={() => {
+                    productFilter(pet.id);
+                  }}
+                  src={pet.images}
+                  alt="product"
+                />
                 <div className="view-btn">
                   <Link to="product">
                     <button

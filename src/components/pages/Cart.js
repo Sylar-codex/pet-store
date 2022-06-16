@@ -69,7 +69,7 @@ function Cart() {
                   </div>
                 </div>
                 <div className="cart-page-info-3">
-                  <div style={{ marginRight: "50px" }}>
+                  <div className="cart-page-info-3a">
                     {" "}
                     <p>
                       {data.naira

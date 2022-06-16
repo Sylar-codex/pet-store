@@ -4,7 +4,7 @@ import logo from "../../Pet images/logo.png";
 import { GlobalContext } from "../../Global_Context/GlobalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const data = useContext(GlobalContext);
@@ -14,6 +14,15 @@ export default function Header() {
     return {
       opacity: show && "1",
     };
+  };
+  const navigate = useNavigate();
+  const withoutModal = () => {
+    if (window.innerWidth <= 450) {
+      navigate("/cart");
+      data.setModal(false);
+    } else {
+      data.setModal(true);
+    }
   };
   return (
     <div className="header-div">
@@ -27,7 +36,7 @@ export default function Header() {
           <div className="currency">
             <p
               onClick={() => {
-                setShow((S) => (S = !S));
+                setShow((T) => (T = !T));
               }}
             >
               {data.naira ? "NGN" : data.dollar ? "USD" : "EUR"}
@@ -68,6 +77,7 @@ export default function Header() {
           <div
             onClick={() => {
               data.setModal(true);
+              withoutModal();
             }}
             className="cart-icon"
           >

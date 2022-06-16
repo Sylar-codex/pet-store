@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -14,6 +16,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Rubik", sans-serif;
 }
 .category {
   margin-top: 40px;
@@ -305,15 +308,22 @@
 .cart-page-info-3 {
   display: flex;
 }
+.cart-page-info-3a {
+  margin-right: 50px;
+}
 .order-summary-div {
   margin-right: 40px;
   font-size: 19px;
 }
+
 .order-summary {
   border-bottom: 1px solid var(--gray);
   padding: 15px;
   width: 20rem;
   color: var(--dark-cyan);
+}
+.order-summary h4 {
+  display: block;
 }
 .cart-page-sub-total {
   border-bottom: 1px solid var(--gray);
@@ -598,4 +608,91 @@
   top: 52%;
   font-size: 18px;
   width: 35%;
+}
+
+@media (max-width: 450px) {
+  .product-disp {
+    margin: 1px;
+    margin-left: 0.5rem;
+    justify-content: space-around;
+  }
+  .product-disp-1 {
+    margin: 27px 0 30px 0.8rem;
+    width: 125px;
+  }
+  .category {
+    margin-left: 2rem;
+  }
+  .welcome-msg {
+    margin-left: 10%;
+    top: 20%;
+    width: 80%;
+    height: 55%;
+    font-size: 39px;
+    padding: 10px;
+  }
+
+  .next {
+    left: 93%;
+  }
+  .main-deals {
+    flex-direction: column;
+    overflow: auto;
+  }
+  .stefan,
+  .jack,
+  .lucifer {
+    margin: 10px 10px;
+  }
+  .lucifer p {
+    top: 68%;
+  }
+  .empty {
+    top: 65%;
+  }
+  .cart-page {
+    margin: 40px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-header {
+    width: 100%;
+    font-size: 19px;
+  }
+  .cart-page-info-3 {
+    flex-direction: column-reverse;
+  }
+  .cart-page-info-3a {
+    margin-right: 0px;
+    margin-top: 1rem;
+  }
+  .remove-button {
+    align-self: flex-end;
+  }
+  .prod-info {
+    flex-direction: column;
+    margin: 30px 30px;
+  }
+  .prod-img {
+    width: 100%;
+    height: 25rem;
+  }
+  .prod-desc {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+    padding: 4px;
+  }
+  .order-summary-div {
+    margin-right: 40px;
+    font-size: 19px;
+    width: 100%;
+  }
+  .order-summary {
+    width: 100%;
+  }
+  .order-summary h4 {
+    display: none;
+  }
 }
