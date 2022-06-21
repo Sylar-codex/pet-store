@@ -49,6 +49,7 @@ export default function Header() {
                 onClick={() => {
                   data.setNaira(true);
                   data.setDollar(false);
+                  setShow(false);
                 }}
               >
                 {" "}
@@ -58,6 +59,7 @@ export default function Header() {
                 onClick={() => {
                   data.setDollar(true);
                   data.setNaira(false);
+                  setShow(false);
                 }}
               >
                 {" "}
@@ -67,6 +69,7 @@ export default function Header() {
                 onClick={() => {
                   data.setNaira(false);
                   data.setDollar(false);
+                  setShow(false);
                 }}
               >
                 {" "}

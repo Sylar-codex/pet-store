@@ -36,7 +36,7 @@ function Cart() {
             height: "100%",
             textAlign: "center",
             paddingTop: "25%",
-            paddingBottom: "15%",
+            paddingBottom: "60%",
           }}
         >
           <p>{"Your cart is empty :("}</p>
