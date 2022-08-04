@@ -735,6 +735,13 @@
   .lucifer {
     margin: 10px 10px;
   }
+  .lucifer h1 {
+    top: 12%;
+  }
+  .stefan h1,
+  .jack h1 {
+    top: 39%;
+  }
   .lucifer p {
     top: 68%;
   }
