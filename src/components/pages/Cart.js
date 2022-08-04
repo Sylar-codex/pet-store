@@ -163,7 +163,9 @@ function Cart() {
           </div>
         </div>
       )}
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

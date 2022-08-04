@@ -46,7 +46,7 @@ function Display() {
   };
   const navigate = useNavigate();
   const withoutModal = () => {
-    if (window.innerWidth <= 450) {
+    if (window.innerWidth <= 850) {
       navigate("/cart");
       data.setModal(false);
     } else {
