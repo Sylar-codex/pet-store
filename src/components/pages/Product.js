@@ -3,11 +3,13 @@ import { GlobalContext } from "../../Global_Context/GlobalContext";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function Product() {
   const data = useContext(GlobalContext);
   const [showDesc, setShowDesc] = useState(false);
   const [showReturn, setShowReturn] = useState(false);
-
+  let re = "re";
   const showDescFunc = () => {
     setShowDesc((S) => (S = !S));
   };
@@ -41,7 +43,7 @@ function Product() {
           <div key={product.id}>
             <div className="prod-info">
               <div className="prod-img">
-                <img src={product.images} alt="product" />
+                <LazyLoadImage src={product.images} alt="product" />
               </div>
               <div className="prod-desc">
                 <div className="prod-price-div">
@@ -86,7 +88,7 @@ function Product() {
                       </p>
                     </div>
                     {showDesc && (
-                      <div className="re">
+                      <div className={re}>
                         <p>{product.description}</p>
                       </div>
                     )}
@@ -104,7 +106,7 @@ function Product() {
                     </p>
                   </div>
                   {showReturn && (
-                    <div className="re">
+                    <div className={re}>
                       <p>How you go dey return dog my brother man</p>
                     </div>
                   )}

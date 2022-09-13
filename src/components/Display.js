@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { GlobalContext } from "../Global_Context/GlobalContext.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmarkCircle, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Display() {
   const [product, setProduct] = useState(Pets);
@@ -41,7 +42,6 @@ function Display() {
     const filterProduct = Pets.filter((pet) => {
       return pet.id === id;
     });
-    console.log(filterProduct);
     data.setProductItem(filterProduct);
   };
   const navigate = useNavigate();
@@ -131,7 +131,7 @@ function Display() {
           <div key={pet.id}>
             <div className="product-disp-1">
               <div className="img-disp">
-                <img
+                <LazyLoadImage
                   onClick={() => {
                     productFilter(pet.id);
                   }}
@@ -203,7 +203,7 @@ function Display() {
               {data.cart.map((carts) => (
                 <div className="cart-modal-info-2" key={carts.id}>
                   <div className="cart-mod-img">
-                    <img src={carts.images} alt="cart" />
+                    <LazyLoadImage src={carts.images} alt="cart" />
                   </div>
                   <div className="cart-name-price">
                     <div>

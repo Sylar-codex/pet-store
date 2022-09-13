@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Header from "../header/Header.js";
 import Footer from "../footer/Footer.js";
 import Swal from "sweetalert2";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Cart() {
   const data = useContext(GlobalContext);
@@ -55,7 +56,7 @@ function Cart() {
               <div className="cart-page-info" key={carts.id}>
                 <div className="cart-page-info-2">
                   <div className="cart-page-img">
-                    <img src={carts.images} alt="cart-page" />
+                    <LazyLoadImage src={carts.images} alt="cart-page" />
                   </div>
                   <div className="cart-page-name">
                     <p style={{ marginBottom: "5px" }}>{carts.name}</p>

@@ -468,9 +468,6 @@
 .return p:hover {
   cursor: pointer;
 }
-.re {
-  transition: all 10s ease;
-}
 
 .carousel-main {
   height: 70vh;

@@ -5,6 +5,7 @@ import Brain from "../Pet images/Brain.jpg";
 import Angela from "../Pet images/Angela2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Carousel() {
   const [count, setCount] = useState(0);
@@ -53,7 +54,11 @@ function Carousel() {
           {imageSlider.map((image, i) => (
             <div key={i} className={count === i ? "slide active" : "slide"}>
               {count === i && (
-                <img className="slide-img" src={image} alt="carousel" />
+                <LazyLoadImage
+                  className="slide-img"
+                  src={image}
+                  alt="carousel"
+                />
               )}
             </div>
           ))}
