@@ -1,6 +1,6 @@
 ## Pet store
 
-A webapp designed where users can adopt and purchase pets to give a new home.
+A webapp designed where users can adopt and purchase pets to give a new home. made use of React and its hooks, useContext and context API for state management. Implemented the use of lazy loading images.
 
 ## Tools and language
 
